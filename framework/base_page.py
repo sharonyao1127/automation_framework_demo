@@ -47,7 +47,7 @@ class BasePage(object):
     # 保存图片
     def get_windows_img(self):
         """
-        在这里我们把 file_path 这个参数写死，直接保存到我们项目根目录的一个文件夹.\Screenshots下
+        在这里我们把 file_path 这个参数写死，直接保存到我们项目根目录的一个文件夹./Screenshots/
         """
         file_path = os.path.dirname(os.path.abspath('.')) + '/screenshots/'
         rq = time.strftime('%Y%m%d%H%M',time.localtime(time.time()))
@@ -79,7 +79,7 @@ class BasePage(object):
         if selector_by == 'i' or selector_by =='id':
             try:
                 element = self.driver.find_element_by_id(selector_value)
-                logger.info("Had find the element \ ' %s \ 'successful"
+                logger.info("Had find the element \' %s \'successful"
                             "by %s via value: %s "% (element.text,selector_by,selector_value))
             except NoSuchElementException as e:
                 logger.error("NoSuchElementException: %s" % e)
@@ -96,8 +96,8 @@ class BasePage(object):
             element = self.driver.find_element_by_tag_name(selector_value)
         elif selector_by == "x" or selector_by =="xpath":
             try:
-                element = self.driver.find_element_by_tag_xpath(selector_value)
-                logger.info("Had find the element \ ' %s \ ' successful "
+                element = self.driver.find_element_by_xpath(selector_value)
+                logger.info("Had find the element \' %s \' successful "
                             "by %s via value:%s " %(element.text,selector_by,selector_value))
 
             except NoSuchElementException as e:
@@ -120,6 +120,42 @@ class BasePage(object):
         except NameError as e:
             logger.error("Failed to type in input box with %s" % e)
             self.get_windows_img()
+
+    # 清除文本框
+    def clear(self,selector):
+        el = self.find_element(selector)
+        try:
+            el.clear()
+            logger.info("Clear text in inputbox before typing.")
+        except NameError as e:
+            logger.error("Failed to clear in input box with %s" % e)
+            self.get_windows_img()
+
+    # 点击元素
+    def click(self,selector):
+
+        el = self.find_element(selector)
+
+        try:
+            el_text = el.text
+            el.click()
+            logger.info("The element \' %s \' was clicked." % el_text)
+
+        except NameError as e:
+            logger.error("Failed to click the element with %s" % e)
+
+    # 获取网页标题
+    def get_page_title(self):
+        logger.info("Current page title is %s" % self.driver.title)
+        return self.driver.title
+
+    @staticmethod
+    def sleep(seconds):
+        time.sleep(seconds)
+        logger.info("sleep for %d seconds" % seconds)
+
+
+
 
 
 
