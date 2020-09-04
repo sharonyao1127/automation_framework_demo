@@ -149,6 +149,11 @@ class BasePage(object):
         logger.info("Current page title is %s" % self.driver.title)
         return self.driver.title
 
+    def switch_page(self):
+        handle = self.driver.window_handles
+        if len(handle) > 1:
+            self.driver.switch_to.window(handle[1])
+
     @staticmethod
     def sleep(seconds):
         time.sleep(seconds)
