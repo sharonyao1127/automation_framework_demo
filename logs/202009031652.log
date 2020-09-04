@@ -1,0 +1,13 @@
+2020-09-03 16:52:18,435 - BrowserEngine - INFO - You had select Chrome browser.
+2020-09-03 16:52:18,436 - BrowserEngine - INFO - The test server url is：https://www.baidu.com
+2020-09-03 16:52:21,267 - BrowserEngine - INFO - Starting Chrome browser.
+2020-09-03 16:52:22,828 - BrowserEngine - INFO - Open url: https://www.baidu.com
+2020-09-03 16:52:23,954 - BrowserEngine - INFO - Maximize the current window.
+2020-09-03 16:52:23,956 - BrowserEngine - INFO - Set implicitly wait 10 seconds.
+2020-09-03 16:52:24,000 - BasePage - INFO - Had find the element ' 新闻 ' successful by xpath via value://div[@id='s-top-left']/a[@href='http://news.baidu.com'] 
+2020-09-03 16:52:24,119 - BasePage - INFO - The element ' 新闻 ' was clicked.
+2020-09-03 16:52:26,129 - BasePage - INFO - sleep for 2 seconds
+2020-09-03 16:52:36,187 - BasePage - ERROR - NoSuchElementException:Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='channel-all']//ul//a[@href='/sports']"}
+  (Session info: chrome=84.0.4147.135)
+
+2020-09-03 16:52:36,673 - BasePage - INFO - Had take screenshot and save to folder : /screenshots

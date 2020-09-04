@@ -1,0 +1,16 @@
+2020-09-04 10:07:52,876 - BrowserEngine - INFO - You had select Chrome browser.
+2020-09-04 10:07:52,876 - BrowserEngine - INFO - The test server url is：https://www.baidu.com
+2020-09-04 10:07:55,694 - BrowserEngine - INFO - Starting Chrome browser.
+2020-09-04 10:07:58,158 - BrowserEngine - INFO - Open url: https://www.baidu.com
+2020-09-04 10:07:59,292 - BrowserEngine - INFO - Maximize the current window.
+2020-09-04 10:07:59,294 - BrowserEngine - INFO - Set implicitly wait 10 seconds.
+2020-09-04 10:07:59,357 - BasePage - INFO - Had find the element ' 新闻 ' successful by xpath via value://div[@id='s-top-left']/a[@href='http://news.baidu.com'] 
+2020-09-04 10:07:59,530 - BasePage - INFO - The element ' 新闻 ' was clicked.
+2020-09-04 10:08:01,531 - BasePage - INFO - sleep for 2 seconds
+2020-09-04 10:08:02,596 - BasePage - INFO - Had find the element ' 体育 ' successful by xpath via value://div[@id='channel-all']//li[7]//a[1] 
+2020-09-04 10:08:03,870 - BasePage - INFO - The element ' 体育 ' was clicked.
+2020-09-04 10:08:05,870 - BasePage - INFO - sleep for 2 seconds
+2020-09-04 10:08:08,897 - BasePage - INFO - Had find the element ' NBA赛程表 ' successful by xpath via value://div[@class='schedule clearfix']//li[1] 
+2020-09-04 10:08:09,025 - BasePage - INFO - The element ' NBA赛程表 ' was clicked.
+2020-09-04 10:08:11,025 - BasePage - INFO - sleep for 2 seconds
+2020-09-04 10:08:11,744 - BasePage - INFO - Had take screenshot and save to folder : /screenshots
